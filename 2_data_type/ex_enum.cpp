@@ -6,10 +6,10 @@ using namespace std;
 int main()
 {
 	//
-	// enumeated data type
+	// enumerated data type
 	// attach name to number
 	// enum in cpp are local in class/struct 
-	// enum in cpp are global in class/struct 
+	// enum in c are global in class/struct 
 	//
 	
 	// enum start with 0

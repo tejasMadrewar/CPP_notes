@@ -1,4 +1,4 @@
-all: ex_call_by_reference ex_inline ex_default_arg ex_const_args
+all: ex_call_by_reference ex_inline ex_default_arg ex_const_args ex_overloading
 
 ex_call_by_reference: ex_call_by_reference.cpp
 	g++ ex_call_by_reference.cpp -o ex_call_by_reference
@@ -11,6 +11,10 @@ ex_default_arg: ex_default_arg.cpp
 
 ex_const_args: ex_const_args.cpp
 	g++ ex_const_args.cpp  -o ex_const_args
+
+ex_overloading: ex_overloading.cpp
+	g++ ex_overloading.cpp  -o ex_overloading
+
 
 clean:
 	del *.exe

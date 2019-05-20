@@ -1,4 +1,4 @@
-all: ex_call_by_reference ex_inline ex_default_arg
+all: ex_call_by_reference ex_inline ex_default_arg ex_const_args
 
 ex_call_by_reference: ex_call_by_reference.cpp
 	g++ ex_call_by_reference.cpp -o ex_call_by_reference
@@ -8,6 +8,9 @@ ex_inline: ex_inline.cpp
 
 ex_default_arg: ex_default_arg.cpp
 	g++ ex_default_arg.cpp -o ex_default_arg
+
+ex_const_args: ex_const_args.cpp
+	g++ ex_const_args.cpp  -o ex_const_args
 
 clean:
 	del *.exe

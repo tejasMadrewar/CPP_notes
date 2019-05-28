@@ -1,4 +1,4 @@
-all: c_structure ex_class ex_make_outside_fun_inline ex_nesting_of_member_functions ex_processing_shipping_list
+all: c_structure ex_class ex_make_outside_fun_inline ex_nesting_of_member_functions ex_processing_shipping_list ex_static_data_member ex_static_member_function
 
 c_structure: c_structure.cpp
 	g++ c_structure.cpp -o c_structure
@@ -14,6 +14,12 @@ ex_nesting_of_member_functions: ex_nesting_of_member_functions.cpp
 
 ex_processing_shipping_list: ex_processing_shipping_list.cpp
 	g++ ex_processing_shipping_list.cpp -o ex_processing_shipping_list
+
+ex_static_data_member: ex_static_data_member.cpp
+	g++ ex_static_data_member.cpp -o ex_static_data_member
+
+ex_static_member_function: ex_static_member_function.cpp
+	g++ ex_static_member_function.cpp -o ex_static_member_function
 
 clean:
 	del *.exe

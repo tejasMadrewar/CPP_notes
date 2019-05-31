@@ -1,4 +1,4 @@
-all: c_structure ex_class ex_make_outside_fun_inline ex_nesting_of_member_functions ex_processing_shipping_list ex_static_data_member ex_static_member_function ex_arrays_of_objects ex_objects_as_args ex_friend_function ex_func_friendly_to_two_classes ex_friend_class
+all: c_structure ex_class ex_make_outside_fun_inline ex_nesting_of_member_functions ex_processing_shipping_list ex_static_data_member ex_static_member_function ex_arrays_of_objects ex_objects_as_args ex_friend_function ex_func_friendly_to_two_classes ex_friend_class ex_swap_class_private_data
 
 c_structure: c_structure.cpp
 	g++ c_structure.cpp -o c_structure
@@ -35,6 +35,9 @@ ex_func_friendly_to_two_classes: ex_func_friendly_to_two_classes.cpp
 
 ex_friend_class: ex_friend_class.cpp
 	g++ ex_friend_class.cpp -o ex_friend_class
+
+ex_swap_class_private_data: ex_swap_class_private_data.cpp
+	g++ ex_swap_class_private_data.cpp -o ex_swap_class_private_data
 
 clean:
 	del *.exe

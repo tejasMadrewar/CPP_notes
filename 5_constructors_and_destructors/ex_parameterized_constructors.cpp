@@ -13,6 +13,7 @@ class integer
 public:
 	integer(){};        // this is required as we declared the parameterized constructor
 	integer(int,int);   // constructor declaration
+	integer(integer const & a);  // copy constructor
 	display(){cout << "m = " << m << " n = " << n << endl;}
 
 };
@@ -21,11 +22,18 @@ integer::integer(int x, int y){   // constructor defination
 	m = x; n = y;  // setting default value to m and n
 }
 
+integer::integer(integer const & a){
+	m = a.m; n = a.n;  // setting default value to m and n
+}
 int main(){
 
 	integer int1(0, 100);  // implicit call
 	integer int2 = integer(25 , 75); // explicit call
 
+	int1.display();
+	int2.display();
+	int1 = int2;
+	cout << "After copying int2 -> int1\n";
 	int1.display();
 	int2.display();
 	

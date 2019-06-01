@@ -5,6 +5,8 @@ using namespace std;
 
 // in practice it may be necessary to initialize the various data elements of objects
 // the constructor that can take arguments are called parameterized constructor.
+// parameter of constructor can be any type excpet to the class to which it belongs.
+// it can accept a reference to its own class as a parameter
 
 
 class integer

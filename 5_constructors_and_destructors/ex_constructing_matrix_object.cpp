@@ -8,6 +8,11 @@ class matrix
 	int d1, d2; // dimension
 public:
 	matrix(int x, int y);
+	~matrix(){   // destructor
+		for (int i = 0; i < d1; i++)
+			delete p[i];
+		delete p;
+	}
 	void get_element(int i, int j, int value){ p[i][j] = value;}
 	int put_element(int i, int j){return p[i][j];}
 

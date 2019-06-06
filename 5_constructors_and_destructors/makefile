@@ -1,7 +1,7 @@
 CC = g++
 CCFLAGS = -s
 
-all: ex_constructor ex_parameterized_constructors ex_overloaded_constructors ex_dynamic_init_of_constructor ex_copy_constructor ex_dynamic_constructor ex_constructing_matrix_object
+all: ex_constructor ex_parameterized_constructors ex_overloaded_constructors ex_dynamic_init_of_constructor ex_copy_constructor ex_dynamic_constructor ex_constructing_matrix_object ex_destructor
 
 ex_constructor: ex_constructor.cpp
 	$(CC) $(CCFLAGS) ex_constructor.cpp -o ex_constructor
@@ -23,6 +23,9 @@ ex_dynamic_constructor: ex_dynamic_constructor.cpp
 
 ex_constructing_matrix_object: ex_constructing_matrix_object.cpp
 	$(CC) $(CCFLAGS) ex_constructing_matrix_object.cpp -o ex_constructing_matrix_object
+
+ex_destructor: ex_destructor.cpp
+	$(CC) $(CCFLAGS) ex_destructor.cpp -o ex_destructor
 
 clean:
 	del *.exe

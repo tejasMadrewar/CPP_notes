@@ -16,6 +16,19 @@
 // decalre public operator function of friend function
 // define function
 //
+// Rules for overloading operators
+// 1. Only existing operator, new operator not created
+// 2. at least one operand is userdefined type
+// 3. can not change basic meaning e.g. make - to addition
+// 4. must follow syntax rule of original operator
+// 5. some operator can not be overloaded
+// 6. can not use friend function to overload certain operator ( = , (), [], -> )
+// 7. unary operator - member function takes not explicit arguments and return no explicit values
+// 	friend function - one reference argument
+// 8. binary operator - member function takes one explicit argument
+// 	friend function - 2 explicit arguments
+// 9. binary operator - member function left hand operand must be object of revelant class
+// 10. binary operand - +, -, *, / must return vallue must not change their own argument
 
 
 // overloading unary operator

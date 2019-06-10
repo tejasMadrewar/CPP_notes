@@ -1,7 +1,7 @@
 CC = g++
 CCFLAGS = -s
 
-all: ex_overloading_unary_operator ex_overloading_unary_operator_friend ex_overloading_binary_operator ex_overloading_using_friends ex_manipulation_of_string
+all: ex_overloading_unary_operator ex_overloading_unary_operator_friend ex_overloading_binary_operator ex_overloading_using_friends ex_manipulation_of_string ex_type_conversion_1_basic_to_class ex_type_conversion_2_class_to_basic
 
 ex_overloading_unary_operator: ex_overloading_unary_operator.cpp
 	$(CC) $(CCFLAGS) ex_overloading_unary_operator.cpp -o ex_overloading_unary_operator
@@ -17,6 +17,12 @@ ex_overloading_using_friends: ex_overloading_using_friends.cpp
 
 ex_manipulation_of_string: ex_manipulation_of_string.cpp
 	$(CC) $(CCFLAGS) ex_manipulation_of_string.cpp -o ex_manipulation_of_string
+
+ex_type_conversion_1_basic_to_class: ex_type_conversion_1_basic_to_class.cpp
+	$(CC) $(CCFLAGS) ex_type_conversion_1_basic_to_class.cpp -o ex_type_conversion_1_basic_to_class
+
+ex_type_conversion_2_class_to_basic: ex_type_conversion_2_class_to_basic.cpp
+	$(CC) $(CCFLAGS) ex_type_conversion_2_class_to_basic.cpp -o ex_type_conversion_2_class_to_basic
 
 clean:
 	del *.exe

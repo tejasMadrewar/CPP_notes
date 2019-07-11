@@ -1,7 +1,7 @@
 CC = g++
 CCFLAGS = -s
 
-all: ex_pointers ex_manipulation_of_pointers ex_arithmetic_operation_on_pointers ex_pointers_with_array
+all: ex_pointers ex_manipulation_of_pointers ex_arithmetic_operation_on_pointers ex_pointers_with_array ex_arrays_of_pointers
 
 ex_pointers: ex_pointers.cpp
 	$(CC) $(CCFLAGS) ex_pointers.cpp -o ex_pointers
@@ -14,6 +14,9 @@ ex_arithmetic_operation_on_pointers: ex_arithmetic_operation_on_pointers.cpp
 
 ex_pointers_with_array: ex_pointers_with_array.cpp
 	$(CC) $(CCFLAGS) ex_pointers_with_array.cpp -o ex_pointers_with_array
+
+ex_arrays_of_pointers: ex_arrays_of_pointers.cpp
+	$(CC) $(CCFLAGS) ex_arrays_of_pointers.cpp -o ex_arrays_of_pointers
 
 clean:
 	del *.exe

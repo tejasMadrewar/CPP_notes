@@ -1,7 +1,7 @@
 CC = g++
 CCFLAGS = -s
 
-all: ex_character_io_with_get_and_put ex_reading_strings_with_getline ex_displaying_strings_with_write ex_specifying_field_size_with_width
+all: ex_character_io_with_get_and_put ex_reading_strings_with_getline ex_displaying_strings_with_write ex_specifying_field_size_with_width ex_precision_setting_with_precision
 
 ex_character_io_with_get_and_put: ex_character_io_with_get_and_put.cpp
 	$(CC) $(CCFLAGS) ex_character_io_with_get_and_put.cpp -o ex_character_io_with_get_and_put
@@ -14,6 +14,9 @@ ex_displaying_strings_with_write: ex_displaying_strings_with_write.cpp
 
 ex_specifying_field_size_with_width: ex_specifying_field_size_with_width.cpp
 	$(CC) $(CCFLAGS) ex_specifying_field_size_with_width.cpp -o ex_specifying_field_size_with_width
+
+ex_precision_setting_with_precision: ex_precision_setting_with_precision.cpp
+	$(CC) $(CCFLAGS) ex_precision_setting_with_precision.cpp -o ex_precision_setting_with_precision
 
 clean:
 	del *.exe

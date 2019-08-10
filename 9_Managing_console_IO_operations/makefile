@@ -1,7 +1,7 @@
 CC = g++
 CCFLAGS = -s
 
-all: ex_character_io_with_get_and_put ex_reading_strings_with_getline ex_displaying_strings_with_write ex_specifying_field_size_with_width ex_precision_setting_with_precision ex_padding_with_fill ex_formatting_with_flags_in_setf ex_formatting_with_manipulators
+all: ex_character_io_with_get_and_put ex_reading_strings_with_getline ex_displaying_strings_with_write ex_specifying_field_size_with_width ex_precision_setting_with_precision ex_padding_with_fill ex_formatting_with_flags_in_setf ex_formatting_with_manipulators ex_userdefined_manipulators
 
 ex_character_io_with_get_and_put: ex_character_io_with_get_and_put.cpp
 	$(CC) $(CCFLAGS) ex_character_io_with_get_and_put.cpp -o ex_character_io_with_get_and_put
@@ -26,6 +26,9 @@ ex_formatting_with_flags_in_setf: ex_formatting_with_flags_in_setf.cpp
 
 ex_formatting_with_manipulators: ex_formatting_with_manipulators.cpp
 	$(CC) $(CCFLAGS) ex_formatting_with_manipulators.cpp -o ex_formatting_with_manipulators
+
+ex_userdefined_manipulators: ex_userdefined_manipulators.cpp
+	$(CC) $(CCFLAGS) ex_userdefined_manipulators.cpp -o ex_userdefined_manipulators
 
 clean:
 	del *.exe

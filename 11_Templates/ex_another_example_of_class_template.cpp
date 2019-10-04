@@ -12,13 +12,13 @@ class vector{
 public:
 	vector(){
 		//v = new T[size];
-		for (T i = 0; i < size; i++) {
+		for (int i = 0; i < size; i++) {
 			v[i] = 0;
 		}
 	}
 
 	vector(T* a){
-		for (T i = 0; i < size; i++) {
+		for (int i = 0; i < size; i++) {
 			v[i] = a[i];
 #if DEBUG
 			std::cout << "a : " << i << " " <<  a[i] << " ";
@@ -29,7 +29,7 @@ public:
 
 	T operator*( vector& y){
 		T sum = 0;
-		for (T i = 0; i < size; i++) {
+		for (int i = 0; i < size; i++) {
 			sum += this->v[i] * y.v[i];
 		}
 		return sum;
@@ -37,14 +37,14 @@ public:
 };
 
 int main(){
-	int x[3] = {1, 2, 3};
-	int y[3] = {4, 5, 6};
-	vector<int> v1;    // using template for int type
-	vector<int> v2;    // using template for int type
+	float x[3] = {1.1, 2.2, 3.3};
+	float y[3] = {4.4, 5.5, 6.6};
+	vector<float> v1;    // using template for float type
+	vector<float> v2;    // using template for float type
 	v1 = x;
 	v2 = y;
 
-	int R = v1*v2;
+	float R = v1*v2;
 	cout << "R = " << R << "\n";
 	return 0;
 }

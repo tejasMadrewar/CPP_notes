@@ -1,10 +1,13 @@
 CC = g++
 CCFLAGS = -std=c++11
 
-all: ex_try_block_throwing_exception 
+all: ex_try_block_throwing_exception ex_invoking_function_that_generate_excpetion
 
 ex_try_block_throwing_exception: ex_try_block_throwing_exception.cpp 
 	$(CC) $(CCFLAGS) ex_try_block_throwing_exception.cpp -o ex_try_block_throwing_exception
+
+ex_invoking_function_that_generate_excpetion: ex_invoking_function_that_generate_excpetion.cpp 
+	$(CC) $(CCFLAGS) ex_invoking_function_that_generate_excpetion.cpp -o ex_invoking_function_that_generate_excpetion
 
 clean:
 	del *.exe

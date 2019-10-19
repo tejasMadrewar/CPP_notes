@@ -1,7 +1,7 @@
 CC = g++
 CCFLAGS = -std=c++11
 
-all: ex_try_block_throwing_exception ex_invoking_function_that_generate_excpetion ex_multiple_catch_statement ex_catching_all_exceptions ex_rethrowing_an_exception
+all: ex_try_block_throwing_exception ex_invoking_function_that_generate_excpetion ex_multiple_catch_statement ex_catching_all_exceptions ex_rethrowing_an_exception ex_specifying_exception
 
 ex_try_block_throwing_exception: ex_try_block_throwing_exception.cpp 
 	$(CC) $(CCFLAGS) ex_try_block_throwing_exception.cpp -o ex_try_block_throwing_exception
@@ -17,6 +17,9 @@ ex_catching_all_exceptions: ex_catching_all_exceptions.cpp
 
 ex_rethrowing_an_exception: ex_rethrowing_an_exception.cpp 
 	$(CC) $(CCFLAGS) ex_rethrowing_an_exception.cpp -o ex_rethrowing_an_exception
+
+ex_specifying_exception: ex_specifying_exception.cpp 
+	$(CC) $(CCFLAGS) ex_specifying_exception.cpp -o ex_specifying_exception
 
 clean:
 	del *.exe

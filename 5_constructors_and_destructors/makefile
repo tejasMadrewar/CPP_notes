@@ -1,31 +1,12 @@
 CC = g++
-CCFLAGS = -s
+CCFLAGS = -std=c++11
+CPPFILES = $(wildcard *.cpp)
+EXECUTABLES = $(CPPFILES:.cpp=.exe)
 
-all: ex_constructor ex_parameterized_constructors ex_overloaded_constructors ex_dynamic_init_of_constructor ex_copy_constructor ex_dynamic_constructor ex_constructing_matrix_object ex_destructor
+all : $(EXECUTABLES)
 
-ex_constructor: ex_constructor.cpp
-	$(CC) $(CCFLAGS) ex_constructor.cpp -o ex_constructor
-
-ex_parameterized_constructors: ex_parameterized_constructors.cpp
-	$(CC) $(CCFLAGS) ex_parameterized_constructors.cpp -o ex_parameterized_constructors
-
-ex_overloaded_constructors: ex_overloaded_constructors.cpp
-	$(CC) $(CCFLAGS) ex_overloaded_constructors.cpp -o ex_overloaded_constructors
-
-ex_dynamic_init_of_constructor: ex_dynamic_init_of_constructor.cpp
-	$(CC) $(CCFLAGS) ex_dynamic_init_of_constructor.cpp -o ex_dynamic_init_of_constructor
-
-ex_copy_constructor: ex_copy_constructor.cpp
-	$(CC) $(CCFLAGS) ex_copy_constructor.cpp -o ex_copy_constructor
-
-ex_dynamic_constructor: ex_dynamic_constructor.cpp
-	$(CC) $(CCFLAGS) ex_dynamic_constructor.cpp -o ex_dynamic_constructor
-
-ex_constructing_matrix_object: ex_constructing_matrix_object.cpp
-	$(CC) $(CCFLAGS) ex_constructing_matrix_object.cpp -o ex_constructing_matrix_object
-
-ex_destructor: ex_destructor.cpp
-	$(CC) $(CCFLAGS) ex_destructor.cpp -o ex_destructor
+%.exe:%.cpp
+	$(CC) $(CCFLAGS) $< -o $@
 
 clean:
 	del *.exe

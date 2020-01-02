@@ -1,25 +1,12 @@
 CC = g++
 CCFLAGS = -std=c++11
+CPPFILES = $(wildcard *.cpp)
+EXECUTABLES = $(CPPFILES:.cpp=.exe)
 
-all: ex_try_block_throwing_exception ex_invoking_function_that_generate_excpetion ex_multiple_catch_statement ex_catching_all_exceptions ex_rethrowing_an_exception ex_specifying_exception
+all : $(EXECUTABLES)
 
-ex_try_block_throwing_exception: ex_try_block_throwing_exception.cpp 
-	$(CC) $(CCFLAGS) ex_try_block_throwing_exception.cpp -o ex_try_block_throwing_exception
-
-ex_invoking_function_that_generate_excpetion: ex_invoking_function_that_generate_excpetion.cpp 
-	$(CC) $(CCFLAGS) ex_invoking_function_that_generate_excpetion.cpp -o ex_invoking_function_that_generate_excpetion
-
-ex_multiple_catch_statement: ex_multiple_catch_statement.cpp 
-	$(CC) $(CCFLAGS) ex_multiple_catch_statement.cpp -o ex_multiple_catch_statement
-
-ex_catching_all_exceptions: ex_catching_all_exceptions.cpp 
-	$(CC) $(CCFLAGS) ex_catching_all_exceptions.cpp -o ex_catching_all_exceptions
-
-ex_rethrowing_an_exception: ex_rethrowing_an_exception.cpp 
-	$(CC) $(CCFLAGS) ex_rethrowing_an_exception.cpp -o ex_rethrowing_an_exception
-
-ex_specifying_exception: ex_specifying_exception.cpp 
-	$(CC) $(CCFLAGS) ex_specifying_exception.cpp -o ex_specifying_exception
+%.exe:%.cpp
+	$(CC) $(CCFLAGS) $< -o $@
 
 clean:
 	del *.exe

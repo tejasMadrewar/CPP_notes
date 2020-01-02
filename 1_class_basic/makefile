@@ -1,5 +1,12 @@
-all: class_person.cpp
-	g++ class_person.cpp -o class_person
+CC = g++
+CCFLAGS = -std=c++11
+CPPFILES = $(wildcard *.cpp)
+EXECUTABLES = $(CPPFILES:.cpp=.exe)
+
+all : $(EXECUTABLES)
+
+%.exe:%.cpp
+	$(CC) $(CCFLAGS) $< -o $@
 
 clean:
 	del *.exe
